@@ -8,7 +8,7 @@ import dip.lab2.*;
  *
  * Any other best practice violations? Fix them too.
  *
- * @author your name goes here
+ * @author Mary King
  */
 public class FoodServiceTipCalculator1 {
     private static final double MIN_BILL = 0.00;
@@ -19,13 +19,10 @@ public class FoodServiceTipCalculator1 {
     private static final double POOR_RATE = 0.10;
 
     private double bill;
-    public enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
     private ServiceQuality serviceQuality;
 
     public FoodServiceTipCalculator1(ServiceQuality q, double billAmt) {
-        this.setServiceRating(q);
+        this.setServiceQuality(q);
         this.setBill(billAmt);
     }
 
@@ -54,7 +51,7 @@ public class FoodServiceTipCalculator1 {
         bill = billAmt;
     }
 
-    public final void setServiceRating(ServiceQuality q) {
+    public final void setServiceQuality(ServiceQuality q) {
         // No need to validate because enums provide type safety!
         serviceQuality = q;
     }
