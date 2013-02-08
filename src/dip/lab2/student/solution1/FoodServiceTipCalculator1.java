@@ -9,6 +9,10 @@ package dip.lab2.student.solution1;
  * @author Mary King
  */
 public class FoodServiceTipCalculator1 implements TipCalculatorStrategy {
+    static final double GOOD_RATE = 0.20;
+    static final double FAIR_RATE = 0.15;
+    static final double POOR_RATE = 0.10;
+
     private static final double MIN_BILL = 0.00;
     private static final String BILL_ENTRY_ERR =
             "Error: bill must be greater than or equal to " + MIN_BILL;
@@ -56,6 +60,11 @@ public class FoodServiceTipCalculator1 implements TipCalculatorStrategy {
     @Override
     public ServiceQuality getServiceQuality() {
         return serviceQuality;
+    }
+
+    @Override
+    public void collect() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

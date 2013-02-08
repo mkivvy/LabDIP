@@ -9,6 +9,10 @@ package dip.lab2.student.solution1;
 * @author Mary King
   */
 public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
+    static final double GOOD_RATE = 0.20;
+    static final double FAIR_RATE = 0.15;
+    static final double POOR_RATE = 0.10;
+
     private double baseTipPerBag;
     private int bagCount;
     private ServiceQuality serviceQuality;
@@ -72,6 +76,11 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
                     "error: base tip must be greater than or equal to zero");
         }
         this.baseTipPerBag = baseTipPerBag;
+    }
+
+    @Override
+    public void collect() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

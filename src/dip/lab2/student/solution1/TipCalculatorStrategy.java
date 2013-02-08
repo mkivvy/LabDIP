@@ -6,9 +6,7 @@ package dip.lab2.student.solution1;
  */
 public interface TipCalculatorStrategy {
 
-    static final double GOOD_RATE = 0.20;
-    static final double FAIR_RATE = 0.15;
-    static final double POOR_RATE = 0.10;
+    public abstract void collect();
 
     public abstract double getTip();
 
