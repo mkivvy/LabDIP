@@ -1,7 +1,5 @@
 package dip.lab2.student.solution1;
 
-import dip.lab2.*;
-
 /**
  * An example low-level class. Does this class definition follow the DIP?
  * If not, fix it.
@@ -11,11 +9,6 @@ import dip.lab2.*;
 * @author Mary King
   */
 public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
-//    private static final double MIN_BILL = 0.00;
-//    private static final double MAX_BILL = 100.00;
-//    private static final String BILL_ENTRY_ERR =
-//            "Error: bill must be between " + MIN_BILL + " and "
-//            + MAX_BILL;
     private double baseTipPerBag;
     private int bagCount;
     private ServiceQuality serviceQuality;
@@ -27,6 +20,7 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
         baseTipPerBag = 1.00; // set default value
     }
 
+    @Override
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
@@ -45,11 +39,13 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
         return tip;
     }
 
+    @Override
     public final void setServiceQuality(ServiceQuality q) {
         // No need to validate because enums provide type safety!
         serviceQuality = q;
     }
 
+    @Override
     public ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
