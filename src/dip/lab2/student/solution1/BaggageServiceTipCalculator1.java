@@ -24,7 +24,6 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
         baseTipPerBag = 1.00; // set default value
     }
 
-    @Override
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
@@ -43,13 +42,11 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
         return tip;
     }
 
-    @Override
     public final void setServiceQuality(ServiceQuality q) {
         // No need to validate because enums provide type safety!
         serviceQuality = q;
     }
 
-    @Override
     public ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
@@ -79,7 +76,7 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
     }
 
     @Override
-    public void collect() {
+    public double calculateTip() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
