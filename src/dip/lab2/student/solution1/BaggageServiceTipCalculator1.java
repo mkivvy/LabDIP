@@ -24,6 +24,12 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
         baseTipPerBag = 1.00; // set default value
     }
 
+    @Override
+    public double calculateTip(ServiceQuality q) {
+        this.setServiceQuality(q);
+        return getTip();
+    }
+
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
@@ -73,11 +79,6 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
                     "error: base tip must be greater than or equal to zero");
         }
         this.baseTipPerBag = baseTipPerBag;
-    }
-
-    @Override
-    public double calculateTip() {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }
