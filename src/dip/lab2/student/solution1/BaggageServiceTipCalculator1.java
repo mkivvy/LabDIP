@@ -24,7 +24,8 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
         baseTipPerBag = 1.00; // set default value
     }
 
-    public double getTip() {
+    @Override
+    public final double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
@@ -42,16 +43,18 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
         return tip;
     }
 
+    @Override
     public final void setServiceQuality(ServiceQuality q) {
         // No need to validate because enums provide type safety!
         serviceQuality = q;
     }
 
-    public ServiceQuality getServiceQuality() {
+    @Override
+    public final ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
 
-    public int getBagCount() {
+    public final int getBagCount() {
         return bagCount;
     }
 
@@ -63,11 +66,11 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
         this.bagCount = bagCount;
     }
 
-    public double getBaseTipPerBag() {
+    public final double getBaseTipPerBag() {
         return baseTipPerBag;
     }
 
-    public void setBaseTipPerBag(double baseTipPerBag) {
+    public final void setBaseTipPerBag(double baseTipPerBag) {
         if(baseTipPerBag < 0) {
             throw new IllegalArgumentException(
                     "error: base tip must be greater than or equal to zero");

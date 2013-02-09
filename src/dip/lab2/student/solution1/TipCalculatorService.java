@@ -6,7 +6,7 @@ package dip.lab2.student.solution1;
  */
 public class TipCalculatorService {
     
-    public final double dosomething(TipCalculatorStrategy tipStratety) {
-        return tipStrategy.getTip();
+    public final double calculateTip(TipCalculatorStrategy tipStratety) {
+        return tipStratety.getTip();
     }
 }

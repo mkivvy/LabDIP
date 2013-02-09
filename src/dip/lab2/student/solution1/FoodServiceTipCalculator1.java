@@ -25,6 +25,7 @@ public class FoodServiceTipCalculator1 implements TipCalculatorStrategy {
         this.setBill(billAmt);
     }
 
+    @Override
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
@@ -50,12 +51,14 @@ public class FoodServiceTipCalculator1 implements TipCalculatorStrategy {
         bill = billAmt;
     }
 
+    @Override
     public final void setServiceQuality(ServiceQuality q) {
         // No need to validate because enums provide type safety!
         serviceQuality = q;
     }
 
-    public ServiceQuality getServiceQuality() {
+    @Override
+    public final ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
 
