@@ -25,12 +25,6 @@ public class FoodServiceTipCalculator1 implements TipCalculatorStrategy {
         this.setBill(billAmt);
     }
 
-    @Override
-    public double calculateTip(ServiceQuality q) {
-        this.setServiceQuality(q);
-        return this.getTip();
-    }
-
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 

@@ -23,9 +23,9 @@ public class Startup1 {
  
     public static void main(String[] args) {
         
-        BaggageServiceTipCalculator1 service =
-                new BaggageServiceTipCalculator1(
-                BaggageServiceTipCalculator1.ServiceQuality.FAIR,5);
+        TipCalculatorService[] tcs = 
+            { new BaggageServiceTipCalculator1(ServiceQuality.FAIR,5), 
+            new FoodServiceTipCalculator1(ServiceQuality.GOOD , 50.00)};
         
     }
 

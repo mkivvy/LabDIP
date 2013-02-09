@@ -24,12 +24,6 @@ public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
         baseTipPerBag = 1.00; // set default value
     }
 
-    @Override
-    public double calculateTip(ServiceQuality q) {
-        this.setServiceQuality(q);
-        return getTip();
-    }
-
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
