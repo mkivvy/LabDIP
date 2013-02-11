@@ -1,13 +1,14 @@
 package dip.lab2.student.solution1;
 
 /**
- * An example low-level class. Does this class definition follow the DIP?
- * If not, fix it.
- *
- * Any other best practice violations? Fix them too.
- *
-* @author Mary King
-  */
+ * Calculates a tip for baggage service given a bag count and service quality.  
+ * A base tip rate of $1 per bag is used unless the field is set to another
+ * value.  Constants are used for good, fair, and poor service rates.  This 
+ * class implements all the abstract methods in TipCalculatorStrategy and
+ * adds new methods for getting and setting bagCount & baseTipPerBag.  All
+ * methods are marked final so they cannot be overridden in any derived class.
+ * @author Mary King
+ */
 public class BaggageServiceTipCalculator1 implements TipCalculatorStrategy {
     static final double GOOD_RATE = 0.20;
     static final double FAIR_RATE = 0.15;

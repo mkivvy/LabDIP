@@ -1,11 +1,11 @@
 package dip.lab2.student.solution1;
 
 /**
- * An example low-level class. Does this class definition follow the DIP?
- * If not, fix it.
- *
- * Any other best practice violations? Fix them too.
- *
+ * Calculates a tip for food service given a bill amount and service quality.  
+ * Constants are used for good, fair, and poor service rates.  This class
+ * implements all the abstract methods in TipCalculatorStrategy and adds
+ * new methods for getting and setting bill.  All methods are marked final
+ * so they cannot be overridden in any derived class.
  * @author Mary King
  */
 public class FoodServiceTipCalculator1 implements TipCalculatorStrategy {
@@ -26,7 +26,7 @@ public class FoodServiceTipCalculator1 implements TipCalculatorStrategy {
     }
 
     @Override
-    public double getTip() {
+    public final double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
@@ -49,6 +49,10 @@ public class FoodServiceTipCalculator1 implements TipCalculatorStrategy {
             throw new IllegalArgumentException(BILL_ENTRY_ERR);
         }
         bill = billAmt;
+    }
+
+    public final double getBill() {
+        return bill;
     }
 
     @Override

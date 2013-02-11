@@ -16,6 +16,8 @@ package dip.lab2.student.solution1;
  *    high-level class. Did it work? Are the low-level instances
  *    interchangeable? The DIP requires this.
  * 
+ * This class tests the tip calculation classes accessed through the interface
+ * TipCalculatorStrategy and the class TipCalculatorService.
  * @author Mary King
  */
 public class Startup1 {
